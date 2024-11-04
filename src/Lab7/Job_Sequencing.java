@@ -37,12 +37,15 @@ public class Job_Sequencing {
 
         int maxProfit = 0, count = 0;
         for (int i = 0; i < n; i++) {
+
+
+
             for (int j = arr[i].deadline; j > 0; j--) {
                 if (res[j] == -1) {
-                    res[j] = i; // Assign this job to the first available slot
+                    res[j] = i;
                     maxProfit += arr[i].profit;
                     count++;
-                    break;
+                    break;  
                 }
             }
         }
